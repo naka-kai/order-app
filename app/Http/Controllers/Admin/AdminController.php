@@ -13,7 +13,7 @@ class AdminController extends Controller
 
     public function mypage()
     {
-        return Inertia::render('Admin/MyPage');
+        return view('admin.mypage');
     }
     /**
      * Display a listing of the resource.
