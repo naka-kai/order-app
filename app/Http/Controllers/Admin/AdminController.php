@@ -11,10 +11,18 @@ use App\Http\Controllers\Controller;
 class AdminController extends Controller
 {
 
+    // 管理者用 マイページ
     public function mypage()
     {
         return view('admin.mypage');
     }
+
+    // 管理者用 注文管理
+    public function orderManagement()
+    {
+        return view('admin.order-management');
+    }
+
     /**
      * Display a listing of the resource.
      *
