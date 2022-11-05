@@ -27,6 +27,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/order-mng', [AdminController::class, 'orderManagement'])
     ->middleware(['auth:admin', 'verified'])->name('orderManagement');
 
+    Route::get('/order-mng/{id}', [AdminController::class, 'orderManagementDetail'])
+    ->middleware(['auth:admin', 'verified'])->name('orderManagementDetail');
+
     require __DIR__ . '/admin.php';
 });
 

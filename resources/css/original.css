@@ -1,0 +1,25 @@
+.balloon-right::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    margin-right: -35px;
+    border: 15px solid transparent;
+    border-top: 30px solid;
+    transform: rotate(270deg);
+    --tw-bg-opacity: 1;
+    color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.balloon-left::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: -35px;
+    border: 15px solid transparent;
+    border-top: 30px solid;
+    transform: rotate(90deg);
+    --tw-bg-opacity: 1;
+    color: rgb(252 231 243 / var(--tw-bg-opacity));
+}
