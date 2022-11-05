@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\OrderMngController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,11 +25,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/mypage', [AdminController::class, 'mypage'])
         ->middleware(['auth:admin', 'verified'])->name('mypage');
 
-    Route::get('/order-mng', [AdminController::class, 'orderManagement'])
-    ->middleware(['auth:admin', 'verified'])->name('orderManagement');
+    Route::get('/order-mng', [OrderMngController::class, 'index'])
+    ->middleware(['auth:admin', 'verified'])->name('order_mng.index');
 
-    Route::get('/order-mng/{id}', [AdminController::class, 'orderManagementDetail'])
-    ->middleware(['auth:admin', 'verified'])->name('orderManagementDetail');
+    Route::get('/order-mng/{id}', [OrderMngController::class, 'show'])
+    ->middleware(['auth:admin', 'verified'])->name('order_mng.show');
 
     require __DIR__ . '/admin.php';
 });

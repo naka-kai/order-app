@@ -17,18 +17,6 @@ class AdminController extends Controller
         return view('admin.mypage');
     }
 
-    // 管理者用 注文管理
-    public function orderManagement()
-    {
-        return view('admin.order-management');
-    }
-
-    // 管理者用 注文管理詳細
-    public function orderManagementDetail()
-    {
-        return view('admin.order-management-detail');
-    }
-
     /**
      * Display a listing of the resource.
      *
