@@ -8,19 +8,19 @@
 
     <x-slot name="content">
         <x-frame>
-            <div class="bg-white h-auto w-4/12 sm:w-36 mx-10 my-4 flex justify-center items-center">
-                <select id="countries"
-                    class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option value="all" selected>全て</option>
-                    <option value="not_send">未返信</option>
-                    <option value="wait_reply">返信待ち</option>
-                    <option value="make">製作中</option>
-                    <option value="hand_over">お渡し予定</option>
-                    <option value="finish">取引完了</option>
-                </select>
-            </div>
+            <x-container>
+                <div class="bg-white h-auto w-4/12 sm:w-36 my-4 flex justify-center items-center">
+                    <select id="countries"
+                        class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="all" selected>全て</option>
+                        <option value="not_send">未返信</option>
+                        <option value="wait_reply">返信待ち</option>
+                        <option value="make">製作中</option>
+                        <option value="hand_over">お渡し予定</option>
+                        <option value="finish">取引完了</option>
+                    </select>
+                </div>
 
-            <div class="mx-10">
                 <a href="{{ route('admin.order_mng.show', 1) }}" class="block">
                     <div class="bg-white border border-gray-300 relative my-2">
                         <div
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </x-container>
         </x-frame>
     </x-slot>
 

@@ -8,7 +8,7 @@
 
     <x-slot name="content">
         <x-frame>
-            <div class="mx-10">
+            <x-container>
                 <div class="bg-white border border-gray-300 relative my-2">
                     <div
                         class="absolute top-0 right-0 py-2 px-3 bg-yellow-200 border border-t-0 border-r-0 border-gray-300">
@@ -49,7 +49,7 @@
                         よろしくお願いいたします。<br>
                     </div>
                 </div>
-            </div>
+            </x-container>
         </x-frame>
     </x-slot>
 
